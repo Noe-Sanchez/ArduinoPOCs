@@ -1,2 +1,2 @@
 # ArduinoPOCs
-Several POCs for demonstrating different approaches to common situations while developing with Arduino UNO, Mega, NodeMCU and Raspberry PI
+Several POCs for demonstrating different approaches and topics on Arduino UNO, Mega, NodeMCU and Raspberry PI
