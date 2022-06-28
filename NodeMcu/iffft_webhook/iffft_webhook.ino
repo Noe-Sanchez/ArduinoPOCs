@@ -37,27 +37,24 @@
 #include <Arduino.h>
 #include <ESP8266WiFi.h>
 #include "AnotherIFTTTWebhook.h"
-
-// Set WiFi credentials
-#define WIFI_SSID “YOUR SSID“
-#define WIFI_PASS “YOUR PASSWORD“
+#include "secrets.h"
 
 // Set IFTTT Webhooks event name and key
-#define IFTTT_Key "uCGRJ3uhsVRht-fPA6B_h"
-#define IFTTT_Event "email"
+#define IFTTT_Event "ESP_Mvt_detect"
 
 void setup()
 {
   // Setup serial port
   Serial.begin(115200);
   Serial.println();
+  pinMode(D4, INPUT);
 
   //Begin WiFi
-  WiFi.begin(WIFI_SSID, WIFI_PASS);
+  WiFi.begin(SSIDD, PASSS);
 
   // Connecting to WiFi...
   Serial.print("Connecting to ");
-  Serial.print(WIFI_SSID);
+  Serial.print(SSIDD);
   while (WiFi.status() != WL_CONNECTED)
   {
     delay(100);
@@ -69,13 +66,12 @@ void setup()
   Serial.print("Connected! IP address: ");
   Serial.println(WiFi.localIP());
 
-  // Send Webook to IFTTT
-  send_webhook(IFTTT_Event,IFTTT_Key,"AnotherIFTTT","ESP device","Webhook");
-
 }
 
 void loop() {
-
-  
-  
+  int val = digitalRead(D4);   
+  if (val == HIGH) {
+    send_webhook(IFTTT_Event,APIKEY,"Front door","HIGH","Webhook");
+    delay(500);
   }
+}
