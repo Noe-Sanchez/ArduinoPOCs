@@ -1,5 +1,7 @@
-//7 Segment Display Demo on Arduino Mega
-//Daniel Salinas @ 21/03/2022
+/*
+By: Daniel Salinas on Mar 21 2022
+Contact: danielnsalinass@gmail.com
+*/
 
 const int DISPPINS[] = {26, 28, 30, 32, 34, 22, 24};
 

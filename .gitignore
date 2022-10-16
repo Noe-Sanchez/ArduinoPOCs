@@ -1,2 +1,3 @@
-/NodeMcu/hotspot.ino
+/NodeMcu/voltage_meter/secrets.h
+/NodeMcu/hotspot/secrets.h
 /NodeMcu/iffft_webhook/secrets.h

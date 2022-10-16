@@ -1,3 +1,8 @@
+/*
+By: Daniel Salinas
+Contact: danielnsalinass@gmail.com
+*/
+
 #include <Adafruit_NeoPixel.h>
 #define LED_PIN    D4
 #define LED_COUNT 60
@@ -19,6 +24,7 @@ void loop() {
   while (!Serial.available());
   brr = Serial.readString().toInt();
   strip.setBrightness(brr); 
+  Serial.println(brr;)
 }
 
 void colorWipe(uint32_t color) {

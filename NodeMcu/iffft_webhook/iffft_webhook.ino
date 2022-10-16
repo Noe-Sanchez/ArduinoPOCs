@@ -34,6 +34,11 @@
 // ====================================================================
 // ====================================================================
 
+/*
+By: Daniel Salinas
+Contact: danielnsalinass@gmail.com
+*/
+
 #include <Arduino.h>
 #include <ESP8266WiFi.h>
 #include "AnotherIFTTTWebhook.h"
