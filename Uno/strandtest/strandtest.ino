@@ -1,5 +1,10 @@
+/*
+By: Daniel Salinas
+Contact: danielnsalinass@gmail.com
+*/
+
 #include <Adafruit_NeoPixel.h>
-#define LED_PIN    7
+#define LED_PIN    8
 #define LED_COUNT 60
 
 Adafruit_NeoPixel strip(LED_COUNT, LED_PIN, NEO_GRB + NEO_KHZ800);
@@ -7,13 +12,15 @@ Adafruit_NeoPixel strip(LED_COUNT, LED_PIN, NEO_GRB + NEO_KHZ800);
 void setup(){
   strip.begin();
   strip.show();            
-  strip.setBrightness(250); 
+  strip.setBrightness(255); 
 }
 
 void loop() {
-  //colorWipe(strip.Color(  0, 0,   255), 50);
+  //colorWipe(strip.Color(  255, 0,   0), 20);
   //theaterChase(strip.Color(  0, 0,   255), 50);
-  rainbow(5);
+  //rainbow(5);
+  strip.setPixelColor(4, strip.Color(  0, 0,   255));
+  strip.show();
 }
 
 void colorWipe(uint32_t color, int wait) {

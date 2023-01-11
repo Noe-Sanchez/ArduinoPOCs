@@ -12,6 +12,11 @@
 
 #include <Servo.h>
 
+/*
+By: Daniel Salinas
+Contact: danielnsalinass@gmail.com
+*/
+
 Servo myservo;  // create servo object to control a servo
 // twelve servo objects can be created on most boards
 
